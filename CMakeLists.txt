@@ -29,3 +29,13 @@ set(SOURCE_FILES
         LICENSE)
 
 add_executable(labs_3 ${SOURCE_FILES})
+
+project(lab4)
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES
+        lab4/main.cpp
+        LICENSE)
+
+add_executable(labs_4 ${SOURCE_FILES})
