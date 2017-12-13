@@ -9,13 +9,13 @@ int fact(int n) {
 }
 
 double calcSum() {
-    double sum, term, ex = exp(X + 1);
-    sum = term = X * X * log(1 + X) / (2 + ex);
+    int i = 1;
+    double sum = 0, ch;
 
-    for (int i = 2; fabs(term) > EPS; i++) {
-        term *= -X * log(i + X) * (fact(i) + ex) / log(i - 1 + X);
-        sum += term /= fact(i + 1) + (ex *= 2.718281828);
-    }
+    do
+        sum += ch = pow(-1, i + 1) * pow(X, i + 1) * log(i + X)
+                    / (fact(i + 1) + pow(M_E, i++ + X));
+    while (fabs(ch) > EPS);
 
     return sum;
 }
